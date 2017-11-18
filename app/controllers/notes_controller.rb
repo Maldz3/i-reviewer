@@ -3,7 +3,7 @@ class NotesController < ApplicationController
 
   def create
     @note = @book.notes.new(note_params)
-    if @not.save
+    if @note.save
       redirect_to @book, notice: "Note successfully added!"
     else
       redirect_to @book, alert: "Unable to add note!"
